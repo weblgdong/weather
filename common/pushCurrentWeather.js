@@ -1,4 +1,7 @@
-const weatherModel = require('../../model/currentWeather');
+/**
+ *  添加订阅天气
+ */
+const weatherModel = require('../model/currentWeather');
 
 function pushCurrentWeather(data) {
     return new Promise((resolve, reject) => {

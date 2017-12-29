@@ -1,4 +1,7 @@
-const currentWeatherModel = require('../../model/currentWeather');
+/**
+ * 更新订阅天气
+ */
+const currentWeatherModel = require('../model/currentWeather');
 
 function upCurrentWeather(item) {
     let {city, cityid} = item;

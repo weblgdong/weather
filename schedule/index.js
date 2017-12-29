@@ -11,10 +11,10 @@ db.connection.on('open', function () {
 });
 
 // 所有订阅城市列表
-const queryCityList = require('./common/queryCityList');
+const queryCityList = require('../common/queryCityList');
 
-const updateWeather = require('./common/updateWeather')
-const updateCurrentWeather = require('./common/updateCurrentWeather')
+const updateWeather = require('../common/updateWeather')
+const updateCurrentWeather = require('../common/updateCurrentWeather')
 
 
 async function schedule() {
@@ -27,7 +27,7 @@ async function schedule() {
 
 
 const rule = new nodeSchedule.RecurrenceRule();
-rule.hour = [4,12,18,21];
+rule.hour = [4,10,18,21];
 
 rule.minute = 2;
 

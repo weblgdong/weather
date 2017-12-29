@@ -1,4 +1,7 @@
-const currentWeatherModel = require('../../model/currentWeather');
+/**
+ * 查询订阅天气是否已存在
+ */
+const currentWeatherModel = require('../model/currentWeather');
 
 function queryExisCurrent(item) {
     let {city, cityid} = item;

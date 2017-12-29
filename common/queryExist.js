@@ -1,4 +1,7 @@
-const weatherModel = require('../../model/weather');
+/**
+ * 查询天气是否需要更新
+ */
+const weatherModel = require('../model/weather');
 
 function queryExist(item) {
     let {date, city, cityid, updatetime} = item;

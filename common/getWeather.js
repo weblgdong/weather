@@ -1,7 +1,11 @@
+/**
+ * 获取天气
+ */
+
 const request = require('request');
 const iconv = require('iconv-lite');
-const config = require('../../config');
-const {json2Url} = require('../../utils');
+const config = require('../config');
+const {json2Url} = require('../utils/index');
 
 function getWeather(city) {
     let params = {

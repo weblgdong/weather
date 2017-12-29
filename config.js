@@ -1,7 +1,7 @@
 let config = {
     weatherUrl: 'https://way.jd.com/jisuapi/weather',
     cityUrl: 'https://way.jd.com/jisuapi/weather1',
-    appkey: '8c1bae6d2c222e7d4b074f80d5521bcf',
+    appkey: 'bc978e64f18edd21937951c60d3613b4',
     msg: '查询成功'
 };
 

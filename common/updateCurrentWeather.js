@@ -1,4 +1,7 @@
-const config = require('../../config');
+/**
+ * 更新所有订阅天气
+ */
+const config = require('../config');
 
 // 查询天气
 const getWeather = require('./getWeather');

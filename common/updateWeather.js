@@ -23,10 +23,10 @@ function updateWeather(items) {
                 // 列表
                 queryExist(_data).then((exist) => {
                     if (exist) {
-                        console.log(_data.city, '有');
+                        // console.log(_data.city, '有');
                         updateWeather(items)
                     } else {
-                        console.log(_data.city);
+                        // console.log(_data.city);
                         pushWeather(_data).then((res) => {
                             updateWeather(items)
                         })

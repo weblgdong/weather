@@ -23,13 +23,14 @@ function updateCurrentWeather(items) {
                 let _data = data.result.result;
                 // 列表
                 queryExisCurrent(_data).then((exist) => {
+                    console.log(_data.city, _data.weather, _data.templow + '-' + _data.temphigh);
                     if (exist) {
-                        console.log(_data.city, '有');
-                        upCurrentWeather(_data).then((res)=>{
+                        // console.log(_data.city, '有');
+                        upCurrentWeather(_data).then((res) => {
                             updateCurrentWeather(items)
                         })
                     } else {
-                        console.log(_data.city);
+                        // console.log(_data.city);
                         pushCurrentWeather(_data).then((res) => {
                             updateCurrentWeather(items)
                         })

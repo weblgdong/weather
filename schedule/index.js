@@ -1,6 +1,7 @@
+const nodeSchedule = require('node-schedule');
+
 const mongoose = require('mongoose');
 const db = mongoose.connect("mongodb://127.0.0.1:27017/weather");
-const nodeSchedule = require('node-schedule');
 
 db.connection.on('error', err => {
     console.log(err)

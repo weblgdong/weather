@@ -12,9 +12,14 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "iconv-lite": "^0.4.19",
+    "koa": "^2.4.1",
     "mime": "^2.1.0",
     "mongoose": "^4.13.7",
     "node-schedule": "^1.2.5",
     "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0"
   }
 }

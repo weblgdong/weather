@@ -28,12 +28,13 @@ async function schedule() {
 
 
 const rule = new nodeSchedule.RecurrenceRule();
-rule.hour = [4,10,18,21];
+rule.hour = [4,10,12,18,21];
 
 rule.minute = 2;
 
 const j = nodeSchedule.scheduleJob(rule, function(){
-    console.log('开始任务-----------------');
+    //console.log('开始任务-----------------');
+
     schedule();
 });
 

@@ -22,26 +22,34 @@ function updateCurrentWeather(items) {
             if (status) {
                 let _data = data.result.result;
                 // 列表
-                queryExisCurrent(_data).then((exist) => {
-                    console.log(_data.city, _data.weather, _data.templow + '-' + _data.temphigh);
-                    if (exist) {
-                        // console.log(_data.city, '有');
-                        upCurrentWeather(_data).then((res) => {
-                            updateCurrentWeather(items)
-                        })
-                    } else {
-                        // console.log(_data.city);
-                        pushCurrentWeather(_data).then((res) => {
-                            updateCurrentWeather(items)
-                        })
-                    }
-                });
-
+                if (isUndef(_data.city)) {
+                    updateCurrentWeather(items);
+                }else{
+                    queryExisCurrent(_data).then((exist) => {
+                        // console.log(_data.city, _data.weather, _data.templow + '-' + _data.temphigh);
+                        if (exist) {
+                            // console.log(_data.city, '有');
+                            upCurrentWeather(_data).then((res) => {
+                                updateCurrentWeather(items)
+                            })
+                        } else {
+                            // console.log(_data.city);
+                            pushCurrentWeather(_data).then((res) => {
+                                updateCurrentWeather(items)
+                            })
+                        }
+                    });
+                }
             }
         });
     } else {
-        console.log('更新完成')
+        // console.log('更新完成')
     }
+}
+
+
+function isUndef(v) {
+    return v === undefined || v === null
 }
 
 module.exports = updateCurrentWeather;

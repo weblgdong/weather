@@ -4,6 +4,7 @@
 const weatherModel = require('../model/weather');
 
 function pushWeather(data) {
+    //console.log(data);
     return new Promise((resolve, reject) => {
         weatherModel.create(data, function (err, response) {
             if (err) {

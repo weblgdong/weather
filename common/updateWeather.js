@@ -36,7 +36,7 @@ function updateWeather(items) {
             }
         });
     } else {
-        console.log('更新完成')
+        // console.log('更新完成')
     }
 }
 
